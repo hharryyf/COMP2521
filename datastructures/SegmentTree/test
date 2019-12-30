@@ -1,0 +1,27 @@
+rm testsgt
+gcc -Wall -Werror -lm -std=gnu99 -o testsgt testsgt.c SegmentTree.c
+./testsgt < tests/1.in > tests/1.out
+echo ".........................."
+diff -w tests/1.out tests/1.exp && echo "pass test 1" || echo "fail test 1"
+echo ".........................."
+
+./testsgt < tests/2.in > tests/2.out
+diff -w tests/2.out tests/2.exp && echo "pass test 2" || echo "fail test 2"
+
+echo ".........................."
+./testsgt < tests/3.in > tests/3.out
+diff -w tests/3.out tests/3.exp && echo "pass test 3" || echo "fail test 3"
+
+echo ".........................."
+./testsgt < tests/4.in > tests/4.out
+diff -w tests/4.out tests/4.exp && echo "pass test 4" || echo "fail test 4"
+
+echo ".........................."
+
+./testsgt < tests/5.in > tests/5.out
+diff -w tests/5.out tests/5.exp && echo "pass test 5" || echo "fail test 5"
+echo ".........................."
+
+./testsgt < tests/6.in > tests/6.out
+diff -w tests/6.out tests/6.exp && echo "pass test 6" || echo "fail test 6"
+echo ".........................."

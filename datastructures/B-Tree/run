@@ -1,0 +1,3 @@
+gcc -Wall -Werror -lm -o testbt testbt.c BTree.c
+
+time  seq 100000 | sort -R | ./testbt > /dev/null

@@ -1,0 +1,7 @@
+gcc -Wall -Werror -lm -std=gnu99 -o testbit testbit.c BinaryIndex.c
+./testbit < tests/1.in > tests/1.out
+
+echo "Running test...."
+echo ".................................."
+diff tests/1.out tests/1.exp && echo "pass BIT test" || echo "fail BIT test"
+echo ".................................."

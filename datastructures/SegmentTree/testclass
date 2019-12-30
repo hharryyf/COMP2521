@@ -1,0 +1,3 @@
+gcc -Wall -Werror -std=gnu99 -o class classroom.c
+valgrind ./class < data.txt
+

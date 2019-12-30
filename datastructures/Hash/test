@@ -1,0 +1,23 @@
+gcc -Wall -Werror -lm -std=gnu99 -o testhash testhash.c Hashing.c
+gcc -Wall -Werror -lm -std=gnu99 -o testdouble testdouble.c Hashing.c
+./testhash < tests/1.in > tests/1.out
+./testhash < tests/2.in > tests/2.out
+./testhash < tests/3.in > tests/3.out
+./testdouble < tests/4.in > tests/4.out
+./testdouble < tests/5.in > tests/5.out
+
+echo "Running tests on hash chain"
+echo ".............."
+diff -w tests/1.out tests/1.exp && echo "pass test 1" || echo "fail test 1"
+echo ".............."
+diff -w tests/2.out tests/2.exp && echo "pass test 2" || echo "fail test 2"
+echo ".............."
+diff -w tests/3.out tests/3.exp && echo "pass test 3" || echo "fail test 3"
+echo ".............."
+
+echo "Running tests on double hash"
+echo ".............."
+diff -w tests/4.out tests/4.exp && echo "pass test 4" || echo "fail test 4"
+echo ".............."
+diff -w tests/5.out tests/5.exp && echo "pass test 5" || echo "fail test 5"
+echo ".............."

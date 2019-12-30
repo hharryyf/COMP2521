@@ -1,0 +1,3 @@
+gcc -Wall -Werror -o test test.c AVL.c 
+
+time seq 1000000 | sort -R | ./test 
